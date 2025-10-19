@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Federic's Pizza - La Pizza Más Fresca</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        body {
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .pizza-bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 50%, #ffa726 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+<header class="gradient-bg shadow-lg">
+<nav class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img alt="Federic's Pizza Logo" class="h-14 w-14 rounded-full pizza-bounce" src="https://i.imgur.com/EDWicBS.jpeg"/>
+<h1 class="text-3xl font-bold text-white">Federic's Pizza</h1>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-white hover:text-orange-200 font-medium transition-colors" href="#cuenta" id="accountButton">Cuenta</a>
+<a class="text-white hover:text-orange-200 font-medium transition-colors" href="#inicio">Inicio</a>
+<a class="text-white hover:text-orange-200 font-medium transition-colors" href="#menu">Menú</a>
+<a class="text-white hover:text-orange-200 font-medium transition-colors" href="#nosotros">Nosotros</a>
+<a class="text-white hover:text-orange-200 font-medium transition-colors" href="#contacto">Contacto</a>
+<a class="text-white hover:text-orange-200 font-medium transition-colors cursor-pointer" id="helpButton">Ayuda</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-white bg-opacity-20 text-white px-4 py-2 rounded-full font-semibold hover:bg-white hover:bg-opacity-30 transition-colors flex items-center space-x-2" id="cartButton">
+<span>🛒</span>
+<span id="cartCount">0</span>
+</button>
+<a href="#menu" class="bg-white text-orange-500 px-6 py-2 rounded-full font-semibold hover:bg-orange-50 transition-colors inline-block">Ordenar Ahora</a>
+</div>
+</div>
+</nav>
+</header>
+<section class="gradient-bg py-20" id="inicio">
+<div class="container mx-auto px-6 text-center">
+<img alt="Federic's Pizza Logo" class="mx-auto h-32 w-32 mb-6 pizza-bounce rounded-full" src="https://i.imgur.com/EDWicBS.jpeg"/>
+<h2 class="text-5xl font-bold text-white mb-6">¡La Pizza Más Fresca de la Ciudad!</h2>
+<p class="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                Ingredientes frescos, sabores únicos y la mejor experiencia para jóvenes que aman la buena comida
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#menu" class="bg-white text-orange-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-50 hover-scale transition-all inline-block">Ver Menú 📋</a>
+<button class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-500 transition-all">
+                    Delivery Gratis 🚚
+                </button>
+</div>
+</div>
+</section>
+<section class="py-16 bg-gray-50" id="menu">
+<div class="container mx-auto px-6">
+<h3 class="text-4xl font-bold text-center text-gray-800 mb-12">Nuestras Pizzas Favoritas</h3>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/color/96/000000/pizza.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">Margherita Clásica</h4>
+<p class="text-gray-600 mb-4">Tomate, mozzarella fresca, albahaca y amor</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$12.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/doodle/96/000000/pizza--v1.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">Pepperoni Suprema</h4>
+<p class="text-gray-600 mb-4">Pepperoni, queso extra y especias secretas</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$15.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/emoji/96/000000/pizza-emoji.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">Veggie Deluxe</h4>
+<p class="text-gray-600 mb-4">Vegetales frescos, pimientos y champiñones</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$14.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/color/96/000000/pizza.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">BBQ Chicken</h4>
+<p class="text-gray-600 mb-4">Pollo BBQ, cebolla morada, cilantro y salsa especial</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$17.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/doodle/96/000000/pizza--v1.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">Hawaiana Tropical</h4>
+<p class="text-gray-600 mb-4">Jamón, piña fresca, queso mozzarella y un toque de coco</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$16.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-48 flex items-center justify-center">
+<div class="text-6xl"><img alt="Pizza" class="w-24 h-24 mx-auto" src="https://img.icons8.com/emoji/96/000000/pizza-emoji.png"/></div>
+</div>
+<div class="p-6">
+<h4 class="text-2xl font-bold text-gray-800 mb-2">Cuatro Quesos</h4>
+<p class="text-gray-600 mb-4">Mozzarella, parmesano, gorgonzola y queso de cabra</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-bold text-orange-500">$18.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Agregar 🛒
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white">
+<div class="container mx-auto px-6">
+<h3 class="text-4xl font-bold text-center text-gray-800 mb-12">Complementa tu Pizza</h3>
+<div class="mb-16">
+<h4 class="text-3xl font-bold text-center text-orange-500 mb-8">🍟 Papas Crujientes</h4>
+<div class="flex justify-center">
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale max-w-sm">
+<div class="h-40 bg-gradient-to-br from-yellow-400 to-orange-400 flex items-center justify-center">
+<div class="text-5xl">🍟</div>
+</div>
+<div class="p-6">
+<h5 class="text-xl font-bold text-gray-800 mb-2">Papas Clásicas</h5>
+<p class="text-gray-600 mb-4">Papas doradas y crujientes - ¡Personalízalas!</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-orange-500">$4.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                    Agregar 🛒
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h4 class="text-3xl font-bold text-center text-orange-500 mb-8">🍗 Alitas Picantes</h4>
+<div class="flex justify-center">
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale max-w-sm">
+<div class="h-40 bg-gradient-to-br from-red-400 to-orange-500 flex items-center justify-center">
+<div class="text-5xl">🍗</div>
+</div>
+<div class="p-6">
+<h5 class="text-xl font-bold text-gray-800 mb-2">Alitas de Pollo</h5>
+<p class="text-gray-600 mb-4">Jugosas alitas con tu sabor favorito - ¡Elige tamaño y sabor!</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-orange-500">$8.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                    Agregar 🛒
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h4 class="text-3xl font-bold text-center text-orange-500 mb-8">🥖 Panes de Ajo</h4>
+<div class="flex justify-center">
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale max-w-sm">
+<div class="h-40 bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center">
+<div class="text-5xl">🥖</div>
+</div>
+<div class="p-6">
+<h5 class="text-xl font-bold text-gray-800 mb-2">Pan de Ajo Artesanal</h5>
+<p class="text-gray-600 mb-4">Pan fresco con mantequilla de ajo - ¡Elige piezas y tamaño!</p>
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-orange-500">$3.99 MXN</span>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                    Agregar 🛒
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-3xl font-bold text-center text-orange-500 mb-8">🥤 Refrescos Helados</h4>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-32 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+<div class="text-4xl">🥤</div>
+</div>
+<div class="p-4">
+<h5 class="text-lg font-bold text-gray-800 mb-2">Coca-Cola</h5>
+<p class="text-sm text-gray-600 mb-3">Clásica y refrescante</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-orange-500">$2.99 MXN</span>
+<button class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-600 transition-colors">
+                                    + 🛒
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+<div class="text-4xl">🥤</div>
+</div>
+<div class="p-4">
+<h5 class="text-lg font-bold text-gray-800 mb-2">Fanta Naranja</h5>
+<p class="text-sm text-gray-600 mb-3">Sabor cítrico explosivo</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-orange-500">$2.99 MXN</span>
+<button class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-600 transition-colors">
+                                    + 🛒
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-32 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+<div class="text-4xl">🥤</div>
+</div>
+<div class="p-4">
+<h5 class="text-lg font-bold text-gray-800 mb-2">Sprite</h5>
+<p class="text-sm text-gray-600 mb-3">Lima-limón burbujeante</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-orange-500">$2.99 MXN</span>
+<button class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-600 transition-colors">
+                                    + 🛒
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover-scale">
+<div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+<div class="text-4xl">💧</div>
+</div>
+<div class="p-4">
+<h5 class="text-lg font-bold text-gray-800 mb-2">Agua Natural</h5>
+<p class="text-sm text-gray-600 mb-3">Pura y refrescante</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-orange-500">$1.99 MXN</span>
+<button class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-600 transition-colors">
+                                    + 🛒
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white" id="nosotros">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h3 class="text-4xl font-bold text-gray-800 mb-6">Nuestra Historia</h3>
+<div class="max-w-4xl mx-auto">
+<p class="text-lg text-gray-600 mb-6">
+                        Todo comenzó en 2018 cuando Federico, un joven de 22 años apasionado por la cocina, decidió abandonar sus estudios de ingeniería para perseguir su sueño: crear la pizzería más cool de la ciudad. 🎓➡️🍕
+                    </p>
+<p class="text-lg text-gray-600 mb-6">
+                        Con solo $500 en el bolsillo y una receta secreta heredada de su abuela italiana, Federico transformó un pequeño local abandonado en el corazón del barrio universitario. Sus amigos lo llamaban loco, pero él sabía que tenía algo especial entre las manos.
+                    </p>
+<p class="text-lg text-gray-600 mb-8">
+                        Hoy, 6 años después, Federic's Pizza se ha convertido en el lugar favorito de estudiantes, jóvenes profesionales y cualquiera que busque una pizza auténtica con ese toque rebelde que nos caracteriza. ¡Somos más que una pizzería, somos una comunidad! 🤘
+                    </p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-3xl font-bold text-gray-800 mb-6">¿Por Qué Federic's?</h3>
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="text-3xl">🔥</div>
+<div>
+<h4 class="font-semibold text-lg">Ingredientes Frescos</h4>
+<p class="text-gray-600">Seleccionamos los mejores ingredientes cada día</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="text-3xl">⚡</div>
+<div>
+<h4 class="font-semibold text-lg">Entrega Rápida</h4>
+<p class="text-gray-600">Tu pizza caliente en menos de 30 minutos</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="text-3xl">💝</div>
+<div>
+<h4 class="font-semibold text-lg">Precios Justos</h4>
+<p class="text-gray-600">Calidad premium a precios de estudiante</p>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<div class="text-9xl mb-4">🍕</div>
+<p class="text-xl text-gray-600 italic">"La pizza que une a los amigos"</p>
+<p class="text-sm text-orange-500 mt-2 font-semibold">- Federico, Fundador</p>
+</div>
+</div>
+</div>
+</section>
+<section class="gradient-bg py-16" id="contacto">
+<div class="container mx-auto px-6 text-center">
+<h3 class="text-4xl font-bold text-white mb-8">¡Contáctanos!</h3>
+<div class="grid md:grid-cols-3 gap-8 mb-8">
+<div class="bg-white bg-opacity-20 rounded-2xl p-6">
+<div class="text-4xl mb-4">📱</div>
+<h4 class="font-semibold text-white mb-2">Teléfono</h4>
+<p class="text-orange-100">+52 (246) 330 9000</p>
+</div>
+<div class="bg-white bg-opacity-20 rounded-2xl p-6">
+<div class="text-4xl mb-4">📍</div>
+<h4 class="font-semibold text-white mb-2">Ubicación</h4>
+<a class="text-orange-100 hover:text-white transition-colors underline" href="https://maps.app.goo.gl/VRicEsPeYx9MD5ge9?g_st=ipc" rel="noopener noreferrer" target="_blank">
+                        123 Pizza Street, Ciudad
+                    </a>
+</div>
+<div class="bg-white bg-opacity-20 rounded-2xl p-6">
+<div class="text-4xl mb-4">⏰</div>
+<h4 class="font-semibold text-white mb-2">Horarios</h4>
+<p class="text-orange-100">Lun-Dom: 11AM - 11PM</p>
+</div>
+</div>
+<a href="#menu" class="bg-white text-orange-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-50 hover-scale transition-all inline-block">¡Ordena Tu Pizza Ahora! 🍕</a>
+</div>
+</section>
+<footer class="bg-gray-800 text-white py-8">
+<div class="container mx-auto px-6 text-center">
+<div class="flex items-center justify-center space-x-3 mb-4">
+<img alt="Federic's Pizza Logo" class="h-10 w-10 rounded-full" src="https://i.imgur.com/EDWicBS.jpeg"/>
+<h5 class="text-2xl font-bold">Federic's Pizza</h5>
+</div>
+<p class="text-gray-400 mb-4">La mejor pizza para la mejor gente joven</p>
+<div class="flex justify-center space-x-6">
+<a class="text-orange-400 hover:text-orange-300 transition-colors" href="https://www.instagram.com/federics_pizza?igsh=MWVjZnYxanZoNzl4Nw%3D%3D&amp;utm_source=qr" rel="noopener noreferrer" target="_blank">Instagram 📸</a>
+</div>
+<p class="text-gray-500 mt-6">© 2024 Federic's Pizza. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<!-- Modal de Carrito -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4" id="cartModal">
+<div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+<div class="gradient-bg p-6 text-white text-center">
+<h3 class="text-2xl font-bold mb-2">Tu Carrito 🛒</h3>
+<p class="text-orange-100">Revisa tus deliciosas selecciones</p>
+</div>
+<div class="p-6">
+<div class="space-y-4 mb-6" id="cartItems">
+</div>
+<div class="text-center py-8 text-gray-500" id="emptyCart">
+<div class="text-6xl mb-4">🍕</div>
+<p class="text-lg">Tu carrito está vacío</p>
+<p class="text-sm">¡Agrega algunas pizzas deliciosas!</p>
+</div>
+<div class="border-t pt-4 mb-6 hidden" id="cartSummary">
+<div class="flex justify-between items-center text-xl font-bold">
+<span>Total del Carrito:</span>
+<span class="text-orange-500" id="cartTotal">$0.00 MXN</span>
+</div>
+</div>
+<div class="flex space-x-3">
+<button class="flex-1 border-2 border-gray-300 text-gray-700 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors" id="closeCart">
+                        Seguir Comprando
+                    </button>
+<button class="flex-1 bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors" id="checkoutCart">
+                        Proceder al Pago 💳
+                    </button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal de Cuenta -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4 transition-opacity duration-300" id="accountModal">
+<div class="bg-white rounded-2xl max-w-md w-full overflow-hidden transform transition-all duration-500 scale-95" id="accountModalContent">
+<div class="gradient-bg p-6 text-white text-center">
+<h3 class="text-2xl font-bold mb-2">Tu Cuenta 👤</h3>
+<p class="text-orange-100">Elige una opción</p>
+</div>
+<div class="p-6 text-center space-y-4">
+<button class="w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors" id="openRegister">Crear Cuenta 📝</button>
+<button class="w-full border-2 border-orange-500 text-orange-500 py-3 rounded-full font-semibold hover:bg-orange-50 transition-colors" id="openLogin">Iniciar Sesión 🔐</button>
+<button class="w-full text-gray-500 mt-4 hover:text-gray-700 transition-colors" id="closeAccountModal">Cancelar</button>
+</div>
+</div>
+</div>
+
+<!-- Modal Crear Cuenta -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4 transition-opacity duration-300" id="registerModal">
+<div class="bg-white rounded-2xl max-w-md w-full overflow-hidden transform transition-all duration-500 scale-95">
+<div class="gradient-bg p-6 text-white text-center">
+<h3 class="text-2xl font-bold mb-2">Crear Cuenta 📝</h3>
+<p class="text-orange-100">Completa tus datos básicos</p>
+</div>
+<form class="p-6 space-y-4" id="registerForm">
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Nombre" required="" type="text" id="regNombre"/>
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Apellidos" required="" type="text" id="regApellidos"/>
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Teléfono" required="" type="tel" id="regTelefono"/>
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Correo electrónico" required="" type="email" id="regEmail"/>
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Contraseña" required="" type="password" id="regPassword"/>
+<button class="w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors" type="submit">Registrar</button>
+<button class="w-full text-gray-500 hover:text-gray-700 transition-colors" id="closeRegister" type="button">Cancelar</button>
+</form>
+</div>
+</div>
+
+<!-- Modal Iniciar Sesión -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4 transition-opacity duration-300" id="loginModal">
+<div class="bg-white rounded-2xl max-w-md w-full overflow-hidden transform transition-all duration-500 scale-95">
+<div class="gradient-bg p-6 text-white text-center">
+<h3 class="text-2xl font-bold mb-2">Iniciar Sesión 🔐</h3>
+<p class="text-orange-100">Ingresa tus datos</p>
+</div>
+<form class="p-6 space-y-4" id="loginForm">
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Correo electrónico" required="" type="email" id="loginEmail"/>
+<input class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Contraseña" required="" type="password" id="loginPassword"/>
+<button class="w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors" type="submit">Entrar</button>
+<button class="w-full text-gray-500 hover:text-gray-700 transition-colors" id="closeLogin" type="button">Cancelar</button>
+</form>
+</div>
+</div>
+
+<!-- CONEXIÓN CON BACKEND - CÓDIGO JAVASCRIPT -->
+<script>
+// URL de tu backend - LOCAL para pruebas
+const API_URL = "http://localhost:3000/api/auth";
+
+// ===== CONEXIÓN CON BACKEND =====
+
+// Registro
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const userData = {
+    nombre: document.getElementById("regNombre").value,
+    apellidos: document.getElementById("regApellidos").value,
+    telefono: document.getElementById("regTelefono").value,
+    email: document.getElementById("regEmail").value,
+    password: document.getElementById("regPassword").value
+  };
+
+  console.log("Enviando registro:", userData);
+
+  try {
+    const res = await fetch(`${API_URL}/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData)
+    });
+
+    const data = await res.json();
+    alert(data.message || data.error);
+    
+    if (res.ok) {
+      document.getElementById("registerModal").classList.add("hidden");
+      e.target.reset();
+    }
+  } catch (error) {
+    alert("Error de conexión: " + error.message);
+  }
+});
+
+// Login
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const loginData = {
+    email: document.getElementById("loginEmail").value,
+    password: document.getElementById("loginPassword").value
+  };
+
+  console.log("Enviando login:", loginData);
+
+  try {
+    const res = await fetch(`${API_URL}/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(loginData)
+    });
+
+    const data = await res.json();
+    alert(data.message || data.error);
+    
+    if (res.ok) {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userEmail", loginData.email);
+      document.getElementById("loginModal").classList.add("hidden");
+      e.target.reset();
+      
+      // Actualizar interfaz para mostrar que está loggeado
+      updateUIOnLogin();
+    }
+  } catch (error) {
+    alert("Error de conexión: " + error.message);
+  }
+});
+
+// Función para actualizar la UI cuando alguien inicia sesión
+function updateUIOnLogin() {
+  const userEmail = localStorage.getItem("userEmail");
+  if (userEmail) {
+    // Cambiar "Cuenta" por el email del usuario
+    const accountButton = document.getElementById("accountButton");
+    if (accountButton) {
+      accountButton.textContent = userEmail;
+      accountButton.style.fontWeight = "bold";
+      accountButton.style.color = "#ffedd5";
+    }
+  }
+}
+
+// Verificar si ya hay sesión al cargar la página
+document.addEventListener('DOMContentLoaded', updateUIOnLogin);
+
+// ===== LÓGICA DE MODALES =====
+
+document.getElementById('accountButton').addEventListener('click', () => {
+  const modal = document.getElementById('accountModal');
+  modal.classList.remove('hidden');
+  setTimeout(() => modal.children[0].classList.replace('scale-95', 'scale-100'), 10);
+});
+
+document.getElementById('closeAccountModal').addEventListener('click', () => {
+  const modal = document.getElementById('accountModal');
+  modal.classList.add('hidden');
+});
+
+// Abrir formularios
+document.getElementById('openRegister').addEventListener('click', () => {
+  document.getElementById('accountModal').classList.add('hidden');
+  document.getElementById('registerModal').classList.remove('hidden');
+});
+
+document.getElementById('openLogin').addEventListener('click', () => {
+  document.getElementById('accountModal').classList.add('hidden');
+  document.getElementById('loginModal').classList.remove('hidden');
+});
+
+// Cerrar formularios
+document.getElementById('closeRegister').addEventListener('click', () => {
+  document.getElementById('registerModal').classList.add('hidden');
+});
+
+document.getElementById('closeLogin').addEventListener('click', () => {
+  document.getElementById('loginModal').classList.add('hidden');
+});
+
+// Cerrar si se hace clic fuera del contenido
+['accountModal', 'registerModal', 'loginModal'].forEach(id => {
+  document.getElementById(id).addEventListener('click', e => {
+    if (e.target.id === id) e.target.classList.add('hidden');
+  });
+});
+
+// Lógica del carrito (simplificada)
+let cart = [];
+document.getElementById('cartButton').addEventListener('click', function() {
+  document.getElementById('cartModal').classList.remove('hidden');
+});
+
+document.getElementById('closeCart').addEventListener('click', function() {
+  document.getElementById('cartModal').classList.add('hidden');
+});
+
+// Agregar productos al carrito (ejemplo básico)
+document.querySelectorAll('button').forEach(btn => {
+  if (btn.textContent.includes('Agregar') || btn.textContent.includes('+ 🛒')) {
+    btn.addEventListener('click', function() {
+      const product = this.closest('.p-6, .p-4');
+      const name = product.querySelector('h4, h5')?.textContent || 'Producto';
+      const price = product.querySelector('.text-orange-500')?.textContent || '$0.00';
+      
+      cart.push({ name, price });
+      document.getElementById('cartCount').textContent = cart.length;
+      alert(`✅ ${name} agregado al carrito!`);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
